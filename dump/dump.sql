@@ -1,0 +1,22 @@
+CREATE TABLE `habr_articles` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`header` VARCHAR(255) NULL DEFAULT NULL,
+	`text` TEXT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=28
+;
+
+CREATE TABLE `habr_article_images` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`file_name` VARCHAR(255) NULL DEFAULT NULL,
+	`article_id` INT(11) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=192
+;
+
