@@ -14,9 +14,6 @@ class Controller_parser
 
     public function index()
     {
-//        sleep('1');
-//        return 13;
-
         $qty = $this->quantityParseElements - 1;
         $selector = $this->selector . ':lt(' . $qty. ')';
 
@@ -48,7 +45,5 @@ class Controller_parser
             $modelArticle->saveArticle($pageContent);
 
         }
-
-        return true;
     }
 }

@@ -12,10 +12,14 @@ $( document ).ready(function() {
 
                 if ( result ) {
 
+                    console.log(result);
+
                     $('.loading').hide();
-                    alert('Parsing error!')
+                    alert('Parsing error!');
+                    window.location.reload(true);
 
                 } else {
+                    window.location.reload(true);
                     $('.loading').hide();
                 }
 

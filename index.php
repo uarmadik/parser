@@ -1,11 +1,21 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+session_start();
 
-require_once 'lib/phpQuery.php';
+error_reporting( E_ALL );
+require_once '../vendor/autoload.php';
 
-$a = new \core\Parser();
-$content = $a->getWebPage();
-//var_dump($content);
-$elements = $a->getPageElements($content);
-var_dump($elements);
+use app\core\Route;
+
+echo 'test';
+
+try {
+
+    Route::start();
+
+} catch (Exception $e) {
+
+    echo $e->getMessage();
+}
+
+echo 'test 2';

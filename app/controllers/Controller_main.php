@@ -70,8 +70,12 @@ class Controller_main
         }
 
         $countRows = $modelArticle->getCountRows();
-        $countPages = ceil($countRows / $this->perPage);
 
-        return $countPages;
+        if ($countRows > 0) {
+
+            return ceil($countRows / $this->perPage);
+        }
+
+        return null;
     }
 }
